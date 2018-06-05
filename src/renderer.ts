@@ -1,9 +1,10 @@
-export interface RenderObject {
+export interface RenderObjectInterface {
     render(canvas: HTMLCanvasElement, context: CanvasRenderingContext2D);
 }
 
 /**
  * Rendering class
+ * Controls the rendering process. you can easily add, flush render objects. Don't forget to start the renderer.
  */
 export class Renderer {
     public static requestAnimFrame: Function = () => {
@@ -15,11 +16,12 @@ export class Renderer {
     };
 
     public canvas: HTMLCanvasElement;
+
     public context: CanvasRenderingContext2D;
 
-    public is_running: boolean = false;
+    private is_running: boolean = false;
 
-    private renderObjects: Array<RenderObject> = [];
+    private renderObjects: Array<RenderObjectInterface> = [];
 
 
     public constructor(canvas_id: string) {
@@ -47,7 +49,7 @@ export class Renderer {
         this.is_running = false;
     }
 
-    public addRenderObject(renderObject: RenderObject): void {
+    public addRenderObject(renderObject: RenderObjectInterface): void {
         this.renderObjects.push(renderObject);
     }
 
@@ -55,7 +57,7 @@ export class Renderer {
         this.renderObjects = Array();
     }
 
-    public getRenderObjects(): Array<RenderObject> {
+    public getRenderObjects(): Array<RenderObjectInterface> {
         return this.renderObjects;
     }
 

@@ -4,13 +4,17 @@
   "description": "The delightful way to put moving waves on your website",
   "main": "dist/wave.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "test": "ts-node node_modules/jasmine/bin/jasmine JASMINE_CONFIG_PATH=jasmine.json"
   },
   "keywords": [],
   "author": "w1nte",
   "license": "MIT",
   "devDependencies": {
+    "@types/jasmine": "^2.8.8",
+    "jasmine": "^3.1.0",
     "ts-loader": "^4.3.1",
+    "ts-node": "^6.1.0",
     "typescript": "^2.8.3",
     "webpack": "^4.11.0",
     "webpack-cli": "^3.0.2"

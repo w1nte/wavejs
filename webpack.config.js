@@ -19,6 +19,6 @@ module.exports = {
     output: {
         filename: 'wave.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'Wave'
+        library: 'js'
     }
 };
