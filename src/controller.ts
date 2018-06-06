@@ -30,7 +30,7 @@ export class Controller implements RenderObjectInterface {
         this.renderer = renderer;
         this.config = new Config(Controller.defaultConfig, config);
 
-        console.log(this.config.getConfig());
+        //console.log(this.config.getConfig());
 
         this.generate();
     }

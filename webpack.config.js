@@ -14,7 +14,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [ '.tsx', '.ts', '.wave' ]
     },
     output: {
         filename: 'wave.js',

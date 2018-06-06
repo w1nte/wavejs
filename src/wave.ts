@@ -12,7 +12,7 @@ export const DEBUG:boolean = false;
 /**
  * Core class
  */
-export class js {
+export class wave {
     public static defaultConfig: object = {
 
     };
@@ -28,7 +28,7 @@ export class js {
         this.renderer = new Renderer(canvas_id);
         this.renderer.start();
 
-        this.config = new Config(js.defaultConfig, config);
+        this.config = new Config(wave.defaultConfig, config);
 
         this.setup();
 
