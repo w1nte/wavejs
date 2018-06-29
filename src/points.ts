@@ -29,6 +29,7 @@ export class PointDefault extends Point implements RenderObjectInterface {
     public initial_y;
     public drift;
     public tk;
+    public speed: number = 1;
 
     public constructor(x: number, y: number) {
         super(x, y);
@@ -40,7 +41,7 @@ export class PointDefault extends Point implements RenderObjectInterface {
 
     public update(canvas, context) {
 
-        this.tk+=1;
+        this.tk+=this.speed;
 
         let e = 0;
 

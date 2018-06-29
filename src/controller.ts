@@ -109,6 +109,7 @@ export class Controller implements RenderObjectInterface {
         for (let i = -2; i < number + 2; i++) {
             let point = new PointDefault(this.config.get('distance') * i, this.renderer.canvas.height / 2);
             point.drift = this.config.get('drift', 10);
+            point.speed = this.config.get('drift_speed', 1);
             this.points.push(point);
         }
     }
