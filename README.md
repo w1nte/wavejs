@@ -1,7 +1,5 @@
 # wavejs
 
-Do you want waves on your website? Okay, then let us begin.
-
 
 **Warning: It's currently under development, I don't recommend to use it.**
 
